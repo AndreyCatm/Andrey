@@ -9,6 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeSelectTab = document.getElementById('themeSelectTab');
     const htmlTag = document.getElementById('htmlTag');
 
+    const translations = {
+        ru: {
+            profileTitle: 'Профиль Андрея',
+            statusText: 'Создатель расширения RoAndre',
+            aboutText: 'Привет, я Андрей, Тот самый человек который попробовал во всём, о ютуберстве, о программировании, о стаффах, и ещё много всего! Я тут хороший человек и всегда я добрый к людям и также я люблю программирование, ну а ещё я создатель расширение RoAndre, прикиньте? Да?? Я сейчас в стаффах нахожусь в RoPlus, Red Cat YouTube, FunnyHomeu, и ещё много других!',
+            linksTabButton: 'Ссылки',
+            aboutSiteTabButton: 'О сайте',
+            settingsTabButton: 'Настройки',
+            settingsTitle: 'Настройки',
+            settingsTabTitle: 'Настройки',
+            finishSettings: 'Закончить настройку'
+        },
+        en: {
+            profileTitle: 'Andrey\'s Profile',
+            statusText: 'Creator Extension Of RoAndre',
+            aboutText: 'Hello, I am Andrey, the person who has tried everything: YouTube, programming, staff, and much more! I am a good person here and I am always kind to people and also I love programming, and I am also the creator of the RoAndre extension, can you imagine? Yes?? I am currently in staff at RoPlus, Red Cat YouTube, FunnyHomeu, and many others!',
+            linksTabButton: 'Links',
+            aboutSiteTabButton: 'About the Site',
+            settingsTabButton: 'Settings',
+            settingsTitle: 'Settings',
+            settingsTabTitle: 'Settings',
+            finishSettings: 'Finish Setup'
+        }
+    };
+
     const settings = {
         language: localStorage.getItem('language') || 'ru',
         theme: localStorage.getItem('theme') || 'dark',
@@ -44,13 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function setLanguage(language) {
-        if (language === 'en') {
-            document.getElementById('statusText').textContent = 'Creator Extension Of RoAndre';
-            document.getElementById('aboutText').textContent = 'Hello, I am Andrey, the person who has tried everything: YouTube, programming, staff, and much more! I am a good person here and I am always kind to people and also I love programming, and I am also the creator of the RoAndre extension, can you imagine? Yes?? I am currently in staff at RoPlus, Red Cat YouTube, FunnyHomeu, and many others!';
-        } else {
-            document.getElementById('statusText').textContent = 'Создатель расширения RoAndre';
-            document.getElementById('aboutText').textContent = 'Привет, я Андрей, Тот самый человек который попробовал во всём, о ютуберстве, о программировании, о стаффах, и ещё много всего! Я тут хороший человек и всегда я добрый к людям и также я люблю программирование, ну а ещё я создатель расширение RoAndre, прикиньте? Да?? Я сейчас в стаффах нахожусь в RoPlus, Red Cat YouTube, FunnyHomeu, и ещё много других!';
-        }
+        const lang = translations[language];
+        document.getElementById('profileTitle').textContent = lang.profileTitle;
+        document.getElementById('statusText').textContent = lang.statusText;
+        document.getElementById('aboutText').textContent = lang.aboutText;
+        document.getElementById('linksTabButton').textContent = lang.linksTabButton;
+        document.getElementById('aboutSiteTabButton').textContent = lang.aboutSiteTabButton;
+        document.getElementById('settingsTabButton').textContent = lang.settingsTabButton;
+        document.getElementById('settingsTitle').textContent = lang.settingsTitle;
+        document.getElementById('settingsTabTitle').textContent = lang.settingsTabTitle;
+        document.getElementById('finishSettings').textContent = lang.finishSettings;
     }
 
     function setTheme(theme) {
