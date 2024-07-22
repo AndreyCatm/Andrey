@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -11,6 +11,7 @@ body {
     --text-color: #ffffff;
     --btn-bg: #282828;
     --btn-hover: #383838;
+    --primary-color: #6200ea;
 }
 
 .light-theme {
@@ -18,6 +19,36 @@ body {
     --text-color: #000000;
     --btn-bg: #dcdcdc;
     --btn-hover: #c0c0c0;
+    --primary-color: #6200ea;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .settings-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .settings-button:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
 }
 
 .container {
@@ -25,6 +56,12 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-section {
@@ -32,12 +69,20 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
 }
 
 .status {
@@ -69,6 +114,7 @@ body {
     display: none;
     margin-top: 20px;
     text-align: center;
+    width: 100%;
 }
 
 .tab-content ul {
@@ -131,21 +177,31 @@ body {
     text-align: center;
 }
 
-.settings-content select {
-    margin: 10px 0;
-    padding: 5px;
+.settings-content h2 {
+    margin-top: 0;
+}
+
+.settings-content label, .settings-content select, .settings-content button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
 }
 
 .settings-content button {
     background-color: var(--btn-bg);
-    color: var(--text-color);
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 10px;
     transition: background-color 0.3s ease;
 }
 
 .settings-content button:hover {
     background-color: var(--btn-hover);
+}
+
+.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
 }
