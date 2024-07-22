@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне - Андрей</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -27,6 +28,10 @@
         </div>
     </div>
     <div class="container" id="mainContent" style="display: none;">
+        <header>
+            <h1>Профиль Андрея</h1>
+            <button class="settings-button" onclick="openSettings()">Настройки</button>
+        </header>
         <div class="profile-section">
             <img src="Avatar.png" alt="Avatar" class="avatar">
             <div class="status">
@@ -39,6 +44,7 @@
         <div class="tabs">
             <button class="tab-button" onclick="openTab(event, 'linksTab')">Ссылки</button>
             <button class="tab-button" onclick="openTab(event, 'aboutSiteTab')">О сайте</button>
+            <button class="tab-button" onclick="openTab(event, 'settingsTab')">Настройки</button>
         </div>
         <div id="linksTab" class="tab-content">
             <ul>
@@ -50,6 +56,22 @@
         </div>
         <div id="aboutSiteTab" class="tab-content">
             <p>Сайт был создан с помощью GitHub и его создал только я, заняло 1-2 часа для создания этого сайта.</p>
+        </div>
+        <div id="settingsTab" class="tab-content">
+            <div class="settings-content">
+                <h2>Настройки</h2>
+                <label for="languageSelectTab">Изменить язык:</label>
+                <select id="languageSelectTab">
+                    <option value="ru">Русский</option>
+                    <option value="en">English</option>
+                </select>
+                <label for="themeSelectTab">Изменить тему:</label>
+                <select id="themeSelectTab">
+                    <option value="dark">Тёмная</option>
+                    <option value="light">Светлая</option>
+                </select>
+                <button onclick="saveSettingsFromTab()">Сохранить настройки</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
