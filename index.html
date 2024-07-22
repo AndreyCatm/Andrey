@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне - Андрей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <h2>Настройки</h2>
+            <label for="languageSelect">Изменить язык:</label>
+            <select id="languageSelect">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+            <label for="themeSelect">Изменить тему:</label>
+            <select id="themeSelect">
+                <option value="dark">Тёмная</option>
+                <option value="light">Светлая</option>
+            </select>
+            <button id="finishSettings">Закончить настройку</button>
+        </div>
+    </div>
+    <div class="container" id="mainContent" style="display: none;">
+        <div class="profile-section">
+            <img src="Avatar.png" alt="Avatar" class="avatar">
+            <div class="status">
+                <h2 id="statusText">Creator Extension Of RoAndre</h2>
+                <p id="aboutText">
+                    Привет, я Андрей, Тот самый человек который попробовал во всём, о ютуберстве, о программировании, о стаффах, и ещё много всего! Я тут хороший человек и всегда я добрый к людям и также я люблю программирование, ну а ещё я создатель расширение RoAndre, прикиньте? Да?? Я сейчас в стаффах нахожусь в RoPlus, Red Cat YouTube, FunnyHomeu, и ещё много других!
+                </p>
+            </div>
+        </div>
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab(event, 'linksTab')">Ссылки</button>
+            <button class="tab-button" onclick="openTab(event, 'aboutSiteTab')">О сайте</button>
+        </div>
+        <div id="linksTab" class="tab-content">
+            <ul>
+                <li><a href="https://www.roblox.com/users/610156345/profile" target="_blank">Ссылка на Roblox аккаунт</a></li>
+                <li><a href="https://www.roblox.com/groups/13697684/Andre-Luz#!/about" target="_blank">Ссылка на мою группу Roblox</a></li>
+                <li><a href="https://steamcommunity.com/profiles/76561198328773424" target="_blank">Ссылка на мой Steam</a></li>
+                <li><a href="https://andreycatm.github.io/ClickerIvan/" target="_blank">Ссылка на мой первый проект</a></li>
+            </ul>
+        </div>
+        <div id="aboutSiteTab" class="tab-content">
+            <p>Сайт был создан с помощью GitHub и его создал только я, заняло 1-2 часа для создания этого сайта.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
