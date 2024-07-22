@@ -41,31 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
         themeSelect.value = settings.theme;
         languageSelectTab.value = settings.language;
         themeSelectTab.value = settings.theme;
-
-        updateTabTitles();
     }
 
     function setLanguage(language) {
         if (language === 'en') {
-            document.getElementById('profileTitle').textContent = 'Andrey\'s Profile';
             document.getElementById('statusText').textContent = 'Creator Extension Of RoAndre';
             document.getElementById('aboutText').textContent = 'Hello, I am Andrey, the person who has tried everything: YouTube, programming, staff, and much more! I am a good person here and I am always kind to people and also I love programming, and I am also the creator of the RoAndre extension, can you imagine? Yes?? I am currently in staff at RoPlus, Red Cat YouTube, FunnyHomeu, and many others!';
-            document.getElementById('linksTabButton').textContent = 'Links';
-            document.getElementById('aboutSiteTabButton').textContent = 'About the Site';
-            document.getElementById('settingsTabButton').textContent = 'Settings';
-            document.getElementById('settingsTitle').textContent = 'Settings';
-            document.getElementById('settingsTabTitle').textContent = 'Settings';
-            document.getElementById('finishSettings').textContent = 'Finish Setup';
         } else {
-            document.getElementById('profileTitle').textContent = 'Профиль Андрея';
             document.getElementById('statusText').textContent = 'Создатель расширения RoAndre';
             document.getElementById('aboutText').textContent = 'Привет, я Андрей, Тот самый человек который попробовал во всём, о ютуберстве, о программировании, о стаффах, и ещё много всего! Я тут хороший человек и всегда я добрый к людям и также я люблю программирование, ну а ещё я создатель расширение RoAndre, прикиньте? Да?? Я сейчас в стаффах нахожусь в RoPlus, Red Cat YouTube, FunnyHomeu, и ещё много других!';
-            document.getElementById('linksTabButton').textContent = 'Ссылки';
-            document.getElementById('aboutSiteTabButton').textContent = 'О сайте';
-            document.getElementById('settingsTabButton').textContent = 'Настройки';
-            document.getElementById('settingsTitle').textContent = 'Настройки';
-            document.getElementById('settingsTabTitle').textContent = 'Настройки';
-            document.getElementById('finishSettings').textContent = 'Закончить настройку';
         }
     }
 
